@@ -26,7 +26,7 @@ namespace PlaybackTools
 
             AddSection("Copyright & Warranty",
                 "Playback Tools\n" +
-                "Copyright (C) 2026 [your name]\n\n" +
+                "Copyright (C) 2026 [Peter Doyle]\n\n" +
                 "This program is free software: you can redistribute it and/or modify " +
                 "it under the terms of the GNU General Public License as published by " +
                 "the Free Software Foundation, either version 3 of the License, or " +
