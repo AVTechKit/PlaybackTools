@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+	<ApplicationIcon>Assets\PlaybackIcon.ico</ApplicationIcon>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+	<Version>2.0.0</Version>
+	<InformationalVersion>Beta 2.0.0</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\IconEdit.pptx" />
+    <None Remove="Assets\LICENSE.txt" />
+    <None Remove="Assets\PlaybackIcon.ico" />
+    <None Remove="Assets\PlaybackIcon.png" />
+    <None Remove="Assets\THIRD-PARTY-LICENSES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\THIRD-PARTY-LICENSES.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="lib\libmpv-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		<Link>libmpv-2.dll</Link>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="3.0.1" />
+    <PackageReference Include="OpenTK.GLWpfControl" Version="4.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\PlaybackIcon.ico" />
+    <Resource Include="Assets\PlaybackIcon.png" />
+  </ItemGroup>
+
+</Project>
